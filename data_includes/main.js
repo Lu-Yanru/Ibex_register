@@ -413,10 +413,10 @@ PennController("test_forcedchoice",
 
               ,
 
-              newText("option1", "Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. 1")
+              newText("option1", "&#8226; Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. 1")
               //.print()
               ,
-              newText("option2", "Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. 2")
+              newText("option2", "&#8226; Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. 2")
               //.print()
               ,
               newCanvas("textcanvas", 800, 200)
