@@ -412,17 +412,19 @@ PennController("test_forcedchoice",
 
               ,
 
-              newCanvas("textcanvas", 800, 150)
+              newText("option1", "Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. 1")
+              //.print()
+              ,
+              newText("option2", "Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. 2")
+              //.print()
+              ,
+              newCanvas("textcanvas", 800, 200)
               .add(0,0, getText("text"))
+              .add(0,100, getText("option1"))
+              .add(0,120, getText("option2"))
               .print()
               ,
 
-              newText("option1", "Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. 1")
-              .print()
-              ,
-              newText("option2", "Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. 2")
-              .print()
-              ,
               newSelector("select")
               .add(getText("option1"), getText("option2"))
               .shuffle()
