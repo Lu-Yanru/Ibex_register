@@ -342,22 +342,35 @@ PennController("hinweise",
 
     PennController("test_scale",
 
-                 newText("text", "Nam dui ligula, ")
+                 newText("text", "Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis.")
                  .settings.center()
-                 //.settings.after(newText("Ja", "<small>Ja [J]</small>").settings.css("padding-left", "100pt").settings.css("font-size", "18px"))
                  .settings.css("font-size", "medium")
 
                  ,
 
                  newScale("feature1", 100)
-                 //.center()
                  .slider()
-                 //.print()
-
+                 .size(500).css("max-width", "unset")
+                 .before(newText("feature1a"))
+                 .after(newText("feature1b"))
+                 ,
+                 newScale("feature2", 100)
+                 .slider()
+                 .size(500).css("max-width", "unset")
+                 .before(newText("feature2a"))
+                 .after(newText("feature2b"))
+                 ,
+                 newScale("feature3", 100)
+                 .slider()
+                 .size(500).css("max-width", "unset")
+                 .before(newText("feature3a"))
+                 .after(newText("feature3b"))
                  ,
                  newCanvas("textcanvas", 800, 400)
-                 .add(250,50, getText("text"))
-                 .add(270,150, getScale("feasture1"))
+                 .add(0,0, getText("text"))
+                 .add(100,100, getScale("feature1"))
+                 .add(100,125, getScale("feature2"))
+                 .add(100,150, getScale("feature3"))
                  .print()
                  ,
                  newButton("weiter", "weiter")
