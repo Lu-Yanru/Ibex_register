@@ -343,7 +343,9 @@ PennController("hinweise",
     PennController("test_scale",
 
                  newText("text", "Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis.")
-                // .print()
+                 .settings.center()
+                 //.settings.after(newText("Ja", "<small>Ja [J]</small>").settings.css("padding-left", "100pt").settings.css("font-size", "18px"))
+                 .settings.css("font-size", "medium")
 
                  ,
 
