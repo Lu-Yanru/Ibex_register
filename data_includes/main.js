@@ -407,20 +407,29 @@ PennController("hinweise",
 
 PennController("test_forcedchoice",
 
-              newHtml("Hinweise_html.html")
-              .print()
+              newText("text", "Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis.")
+              .settings.css("font-size", "medium")
 
               ,
 
-              newCanvas("space1", 1, 160)
+              newCanvas("textcanvas", 800, 150)
+              .add(0,0, getText("text"))
               .print()
-
               ,
 
-              newButton("weiter", "weiter")
-              .center()
+              newText("option1", "Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. 1")
               .print()
+              ,
+              newText("option2", "Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. 2")
+              .print()
+              ,
+              newSelector("select")
+              .add(getText("option1"), getText("option2"))
+              .shuffle()
+              .log()
               .wait()
+              ,
+
 
 
             )
