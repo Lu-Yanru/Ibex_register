@@ -352,6 +352,8 @@ PennController("hinweise",
                  .print()
                  ,
 
+                 //newVar("scaleVar", 0)
+                 //,
                  //newText("scaleValue", "NA").before( newText("Score: ") )
                  //,
 
@@ -361,7 +363,11 @@ PennController("hinweise",
                  .size(500).css("max-width", "unset")
                  .before(newText("feature1a"))
                  .after(newText("feature1b"))
-                 //.callback( getText("scaleValue").text(getScale("feature1")) )
+                 //.callback(
+                //             getVar("scaleVar").set(getScale("feature1")).set(v=>parseInt(v))
+                  //           ,
+                  //           getText("scaleValue").text( getVar("scaleVar") )
+                         )
                  .log("last")
                  .print()
                  ,
@@ -389,7 +395,9 @@ PennController("hinweise",
                  newButton("weiter", "weiter")
                  .center()
                  .print()
-                 .wait()
+                 .wait(getScale("feature1").test.selected()
+                      .and(getScale("feature2").test.selected())
+                      .and(getScale("feature3").test.selected())
 
 
         )
