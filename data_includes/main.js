@@ -7,7 +7,7 @@ PennController.DebugOff()
 
 
 //order of main blocks can be changed here
-PennController.Sequence("init",  "test_scale", "test_forcedchoice",  "send", "end" )
+PennController.Sequence("test_scale", "test_forcedchoice",  "send", "end" )
 //"intro", "PersonalData", "hinweise",
 
 
@@ -342,20 +342,22 @@ PennController("hinweise",
 
     PennController("test_scale",
 
-                 newText("text", "Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor
-lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus.
-Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae
-ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis.")
-                 .print()
+                 newText("text", "Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis.")
+                // .print()
 
                  ,
 
                  newScale("feature1", 100)
+                 //.center()
                  .slider()
-                 .print()
+                 //.print()
 
                  ,
-
+                 newCanvas("textcanvas", 800, 400)
+                 .add(250,50, getText("text"))
+                 .add(270,150, getScale("feasture1"))
+                 .print()
+                 ,
                  newButton("weiter", "weiter")
                  .center()
                  .print()
