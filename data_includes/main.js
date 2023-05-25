@@ -7,8 +7,8 @@ PennController.DebugOff()
 
 
 //order of main blocks can be changed here
-PennController.Sequence("test_scale", "test_forcedchoice",  "send", "end" )
-//"intro", "PersonalData", "hinweise",
+PennController.Sequence("intro", "PersonalData", "hinweise", "test_scale", "test_forcedchoice",  "send", "end" )
+
 
 
 
@@ -367,7 +367,7 @@ PennController("hinweise",
                 //             getVar("scaleVar").set(getScale("feature1")).set(v=>parseInt(v))
                   //           ,
                   //           getText("scaleValue").text( getVar("scaleVar") )
-                         )
+                  //       )
                  .log("last")
                  .print()
                  ,
@@ -398,6 +398,7 @@ PennController("hinweise",
                  .wait(getScale("feature1").test.selected()
                       .and(getScale("feature2").test.selected())
                       .and(getScale("feature3").test.selected())
+                    )
 
 
         )
