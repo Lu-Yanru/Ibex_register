@@ -343,34 +343,47 @@ PennController("hinweise",
     PennController("test_scale",
 
                  newText("text", "Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis.")
-                 .settings.center()
                  .settings.css("font-size", "medium")
 
                  ,
 
+                 newCanvas("textcanvas", 800, 150)
+                 .add(0,0, getText("text"))
+                 .print()
+                 ,
+
+                 //newText("scaleValue", "NA").before( newText("Score: ") )
+                 //,
+
                  newScale("feature1", 100)
+                 .center()
                  .slider()
                  .size(500).css("max-width", "unset")
                  .before(newText("feature1a"))
                  .after(newText("feature1b"))
+                 //.callback( getText("scaleValue").text(getScale("feature1")) )
+                 .log("last")
+                 .print()
                  ,
+                 //getText("scaleValue")
+                 //.print()
+                 //,
                  newScale("feature2", 100)
+                 .center()
                  .slider()
                  .size(500).css("max-width", "unset")
                  .before(newText("feature2a"))
                  .after(newText("feature2b"))
+                 .log("last")
+                 .print()
                  ,
                  newScale("feature3", 100)
+                 .center()
                  .slider()
                  .size(500).css("max-width", "unset")
                  .before(newText("feature3a"))
                  .after(newText("feature3b"))
-                 ,
-                 newCanvas("textcanvas", 800, 400)
-                 .add(0,0, getText("text"))
-                 .add(100,100, getScale("feature1"))
-                 .add(100,125, getScale("feature2"))
-                 .add(100,150, getScale("feature3"))
+                 .log("last")
                  .print()
                  ,
                  newButton("weiter", "weiter")
